@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f5f2e9"><meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="VIBE SCIENCE 科普视频馆。用精致的科学可视化，看懂黑洞与时间、竖直运动和弧度制。">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self' https://github.com https://release-assets.githubusercontent.com; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>VIBE SCIENCE — 让原理，变得看得见。</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+  <script defer src="catalog.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#collection">跳到作品</a>
+<header class="site-header wrap">
+  <a class="brand" href="./" aria-label="VIBE SCIENCE 首页"><span class="brand-icon" aria-hidden="true">v<span>•</span></span><span>VIBE <b>SCIENCE</b><small>科学可视化 · 短片收藏</small></span></a>
+  <nav aria-label="主导航"><a href="#collection">作品</a><a href="#approach">关于</a><a href="sources.html">来源与版权 <span aria-hidden="true">↗</span></a></nav>
+</header>
+<main>
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="small-orbit" aria-hidden="true"></span> A LITTLE CURIOSITY, A CLEARER WORLD</p>
+      <h1 id="hero-title">让原理，<br>变得<span class="title-accent">看得见。</span></h1>
+      <p class="hero-intro">从黑洞旁的一秒，到向上抛出的网球，<br class="desktop-break">再到一段贴合圆周的柔尺。<br>把抽象的知识，变成可以看懂的故事。</p>
+      <a class="button primary" href="#collection">探索全部作品 <span aria-hidden="true">↘</span></a>
+      <div class="hero-facts"><span>03 部短片</span><i></i><span>中文讲解 · 英文辅助</span><i></i><span>720p 在线播放</span></div>
+    </div>
+    <div class="featured-shell">
+      <div class="feature-note"><span>从一个好问题开始</span><span class="feature-index" id="feature-index">01 / 03</span></div>
+      <button class="featured-image" type="button" data-play="black-hole" id="featured-play" aria-label="播放：为什么越靠近黑洞，时间越慢？">
+        <img id="featured-poster" src="assets/posters/black-hole.jpg" width="1280" height="560" alt="吸积盘环绕黑洞，远近两地的时钟正在比较时间" fetchpriority="high">
+        <span class="featured-shade"></span><span class="play-orb" aria-hidden="true">▶</span>
+        <span class="feature-caption"><span class="eyebrow" id="feature-tag">01 · 时空与引力</span><strong id="feature-title">同样的一秒，<br>为什么不一样？</strong><span id="feature-duration">01:52 · 黑洞与时间</span></span>
+      </button>
+      <div class="feature-tabs" role="tablist" aria-label="精选作品">
+        <button type="button" role="tab" aria-selected="true" data-feature="black-hole"><span>01</span> 黑洞与时间</button>
+        <button type="button" role="tab" aria-selected="false" data-feature="vertical-motion"><span>02</span> 竖直运动</button>
+        <button type="button" role="tab" aria-selected="false" data-feature="radian"><span>03</span> 弧度制</button>
+      </div>
+      <div class="feature-footnote"><span class="line-mark" aria-hidden="true"></span> 给直觉一个画面，给理解一点时间。</div>
+    </div>
+  </section>
+  <section id="collection" class="collection wrap" aria-labelledby="collection-title">
+    <div class="section-heading"><div><p class="eyebrow">THE COLLECTION / 作品目录</p><h2 id="collection-title">三个问题，三个新视角。</h2></div><p>不急着背公式，先看见发生了什么。</p></div>
+    <div class="filters" role="group" aria-label="按主题筛选"><button type="button" class="active" aria-pressed="true" data-filter="all">全部作品 <span>3</span></button><button type="button" aria-pressed="false" data-filter="physics">物理</button><button type="button" aria-pressed="false" data-filter="math">数学</button><span class="filter-note">短片不长，理解可以很深。</span></div>
+    <div class="film-grid">
+      <article class="film-card" data-category="physics" id="film-black-hole">
+        <button type="button" class="card-cover" data-play="black-hole" aria-label="播放黑洞与时间"><img src="assets/posters/black-hole.jpg" width="1280" height="560" alt="黑洞、吸积盘与双时钟科学模型" loading="lazy"><span class="card-play" aria-hidden="true">▶</span><span class="duration">01:52</span><span class="episode">01 / PHYSICS</span></button>
+        <div class="card-meta"><span>引力 · 相对论</span><span>112 秒</span></div><h3><button type="button" data-play="black-hole">为什么越靠近黑洞，<br>时间越慢？</button></h3><p>跟随两只时钟，理解时间的比较、引力时间膨胀，以及每个人眼中正常的一秒。</p><div class="card-bottom"><span>原创配乐公开版</span><button type="button" class="text-button" data-play="black-hole">观看短片 <span aria-hidden="true">↗</span></button></div>
+      </article>
+      <article class="film-card" data-category="physics" id="film-vertical-motion">
+        <button type="button" class="card-cover" data-play="vertical-motion" aria-label="播放竖直运动"><img src="assets/posters/vertical-motion.jpg" width="1280" height="560" alt="科学手账中的网球和速度、加速度箭头" loading="lazy"><span class="card-play" aria-hidden="true">▶</span><span class="duration">01:40</span><span class="episode">02 / PHYSICS</span></button>
+        <div class="card-meta"><span>运动 · 重力</span><span>100 秒</span></div><h3><button type="button" data-play="vertical-motion">一颗向上抛出的球，<br>藏着怎样的规律？</button></h3><p>从生活中的一次抛球出发，看清速度和加速度的区别，让运动记录自然变成图像。</p><div class="card-bottom"><span>原创配乐公开版</span><button type="button" class="text-button" data-play="vertical-motion">观看短片 <span aria-hidden="true">↗</span></button></div>
+      </article>
+      <article class="film-card" data-category="math" id="film-radian">
+        <button type="button" class="card-cover" data-play="radian" aria-label="播放弧度制"><img src="assets/posters/radian.jpg" width="1280" height="560" alt="暖色工作台上的圆板和贴合圆弧的柔尺" loading="lazy"><span class="card-play" aria-hidden="true">▶</span><span class="duration">02:28</span><span class="episode">03 / MATHEMATICS</span></button>
+        <div class="card-meta"><span>几何 · 角度</span><span>148 秒</span></div><h3><button type="button" data-play="radian">一圈明明是 360°，<br>为什么又是 2π？</button></h3><p>把半径当作一把尺子，沿着圆周量一量：弧度不是另一套奇怪的规定，而是圆自己的语言。</p><div class="card-bottom"><span>原创配乐公开版</span><button type="button" class="text-button" data-play="radian">观看短片 <span aria-hidden="true">↗</span></button></div>
+      </article>
+    </div>
+    <noscript><p>你的浏览器未启用 JavaScript，也可以直接打开：<a href="https://github.com/tsy7653-design/vibe-science-gallery/releases/download/public-v1/black-hole-720p.mp4">黑洞与时间</a>、<a href="https://github.com/tsy7653-design/vibe-science-gallery/releases/download/public-v1/vertical-motion-720p.mp4">竖直运动</a>、<a href="https://github.com/tsy7653-design/vibe-science-gallery/releases/download/public-v1/radian-720p.mp4">弧度制</a>。</p></noscript>
+  </section>
+  <section class="approach wrap" id="approach" aria-labelledby="approach-title"><div class="approach-symbol" aria-hidden="true"><svg viewBox="0 0 220 190"><ellipse cx="110" cy="95" rx="80" ry="52"/><ellipse cx="110" cy="95" rx="80" ry="52" transform="rotate(60 110 95)"/><ellipse cx="110" cy="95" rx="80" ry="52" transform="rotate(120 110 95)"/><circle cx="110" cy="95" r="6"/></svg></div><div><p class="eyebrow">WHY WE MAKE THESE / 关于视频馆</p><h2 id="approach-title">让好奇心，<br>多停留一会儿。</h2><p>这里收藏用可视化讲清原理的科学短片。画面帮助观察，模型支持理解，公式留在恰好需要它的时候。每一部作品都保留科学边界与资料来源，也给观众留一点自己发现的空间。</p><a class="text-button" href="sources.html">阅读科学与素材来源 <span aria-hidden="true">↗</span></a></div></section>
+</main>
+<footer class="site-footer wrap"><div class="footer-top"><a class="footer-wordmark" href="./">VIBE SCIENCE<span>保持好奇，慢慢看懂。</span></a><div><a href="#collection">回到作品</a><a href="sources.html">来源与版权</a><a href="https://github.com/tsy7653-design/vibe-science-gallery/issues/new?title=Copyright%20or%20contact" target="_blank" rel="noopener noreferrer">版权联系 ↗</a></div></div><p class="copyright">© 2026 VIBE SCIENCE · 本馆公开版使用项目原创合成配乐与原创音效。历史图像单独注明来源。若对素材、署名或授权有疑问，请通过“版权联系”告知，我们会核实并及时处理。</p><p class="privacy">无广告、无跟踪脚本。观看进度仅保存在你的浏览器中。</p></footer>
+<dialog id="player-dialog" aria-labelledby="player-title"><div class="player-header"><div><p class="eyebrow" id="player-category">VIBE SCIENCE</p><h2 id="player-title">观看短片</h2></div><button class="close-button" id="close-player" type="button" aria-label="关闭播放器">×</button></div><div class="video-shell"><video id="video" controls playsinline webkit-playsinline preload="metadata" aria-label="科学短片播放器"></video><p class="video-error" id="video-error" role="alert" hidden></p></div><div class="player-toolbar"><span id="player-spec">720p · 原创配乐公开版</span><div><button id="resume" type="button" hidden>继续观看</button><button id="fullscreen" type="button">全屏观看 ↗</button><a id="download" href="#" download>下载 720p</a></div></div><p class="player-hint">拖动播放器进度条即可跳转。iPhone 全屏后可横向旋转手机观看。</p><div class="chapter-heading">从这里看起 <span>点击章节，跳到关键画面</span></div><div class="chapters" id="chapters"></div><details class="model-note"><summary>科学模型与观看说明</summary><p id="model-note"></p><a href="sources.html">完整来源与版权记录 ↗</a></details></dialog>
+</body></html>

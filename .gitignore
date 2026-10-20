@@ -1,6 +1,9 @@
 work/
 qa/
 site/media/*.mp4
+docs/media/*.mp4
+# Branch deployment uses GitHub's managed Pages build, not a custom workflow.
+.github/workflows/
 *.wav
 *.f32
 .DS_Store
