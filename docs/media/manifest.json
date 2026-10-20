@@ -1,49 +1,61 @@
 {
   "edition": "Public original-score edition",
-  "version": "public-v1",
+  "version": "public-web-v2",
   "items": [
     {
       "id": "black-hole",
-      "file": "black-hole-720p.mp4",
+      "file": "black-hole-720p-web-v2.mp4",
       "duration": 112,
       "width": 1280,
       "height": 720,
       "fps": 30,
-      "bytes": 27327998,
-      "sha256": "639fe2dcf94b9ec85e6e395d6b5286c12199f1d79f3094e3a3dfcfb7860f652c",
+      "bytes": 21168380,
+      "sha256": "6b3301e7e96b88d1fe04bb61e16913e74e239cdb6d1699bd4b629624f6d44f55",
       "music": "Original procedural composition; no third-party song/recording/sample",
       "loudnessLUFS": -18.5,
       "truePeakDbTP": -4.13,
-      "url": "videos/black-hole-720p.mp4"
+      "url": "videos/black-hole-720p-web-v2.mp4",
+      "totalKbps": 1512.027,
+      "videoKbps": 1340.805,
+      "previousBytes": 27327998,
+      "savedPercent": 22.5
     },
     {
       "id": "vertical-motion",
-      "file": "vertical-motion-720p.mp4",
+      "file": "vertical-motion-720p-web-v2.mp4",
       "duration": 100,
       "width": 1280,
       "height": 720,
       "fps": 30,
-      "bytes": 7623143,
-      "sha256": "ba064faca2bb73400a5cefa5fe4d3837b61a83f73eab72f7de61c0debea153b1",
+      "bytes": 6784180,
+      "sha256": "e9ef5689db23a2f81407c1c3a2feea63992aac9e3cd9d69c29de4d5a0372cd28",
       "music": "Original procedural composition; no third-party song/recording/sample",
       "loudnessLUFS": -18.51,
       "truePeakDbTP": -7.02,
-      "url": "https://github.com/tsy7653-design/vibe-science-gallery/releases/download/public-v1/vertical-motion-720p.mp4"
+      "url": "videos/vertical-motion-720p-web-v2.mp4",
+      "totalKbps": 542.734,
+      "videoKbps": 374.18,
+      "previousBytes": 7623143,
+      "savedPercent": 11.0
     },
     {
       "id": "radian",
-      "file": "radian-720p.mp4",
+      "file": "radian-720p-web-v2.mp4",
       "duration": 148,
       "width": 1280,
       "height": 720,
       "fps": 30,
-      "bytes": 10748323,
-      "sha256": "e49ed8e939cc8a90d1d4a814b5ab009ef9be120169802e8dfab19aecc26a08b1",
+      "bytes": 9397502,
+      "sha256": "862776b876ba9c38873365fa3d60a8f716038a245f08d82d59e5ba2635562403",
       "music": "Original procedural composition; no third-party song/recording/sample",
       "loudnessLUFS": -18.66,
       "truePeakDbTP": -2.84,
-      "url": "https://github.com/tsy7653-design/vibe-science-gallery/releases/download/public-v1/radian-720p.mp4"
+      "url": "videos/radian-720p-web-v2.mp4",
+      "totalKbps": 507.973,
+      "videoKbps": 339.339,
+      "previousBytes": 10748323,
+      "savedPercent": 12.6
     }
   ],
-  "delivery": "main:/docs; black-hole uses same-origin videos/; other two remain unchanged Release attachments pending iPhone confirmation"
+  "delivery": "main:/docs; all three videos same-origin, user-initiated loading only"
 }

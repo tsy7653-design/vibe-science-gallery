@@ -8,10 +8,12 @@
 
 ## 媒体与部署
 
-- 仅公开经过审核、替换为原创配乐的720p版本。首轮 iPhone 修复按用户授权将一条黑洞 MP4 放入 `docs/videos/`，由 Pages 同源直接播放；其余两条暂保留 Release 附件，等待手机确认后再扩展。
+- 三部720p公开视频均由 `docs/videos/` 同源直接播放，H.264/AAC、yuv420p、faststart；不经过 Release 下载跳转。黑洞首轮同源方案已通过用户真实 iPhone Safari 测试；本次优化后的文件及另外两部仍须区分浏览器技术检查和用户真机验收。
 - GitHub Pages 发布源选择 **Deploy from a branch → main → /docs → Save**。
 - 不上传自定义 `.github/workflows` 文件，不申请额外 workflow 权限。GitHub 自身仍会执行托管的 Pages 构建与部署。
-- 黑洞在线播放使用相对路径 `videos/black-hole-720p.mp4`，不再经过 Release 下载重定向。大小及 SHA-256 记录于 `media-sha256.txt` 和 `docs/media/manifest.json`。播放器“播放信息”提供仅在当前页面保留的加载事件与错误码，不发送遥测。
+- 当前文件名为 `videos/*-720p-web-v2.mp4`，大小、码率及 SHA-256 见 `docs/media/manifest.json`。旧版 `public-v1` Release 和首轮黑洞文件保留；根目录 `media-sha256.txt` 继续记录旧 Release 附件。
+- 首页不为 video 指定 src，preload=none；用户点击才加载所选影片，关闭时暂停并移除源。加载期间显示封面和克制的进度标记，首帧呈现后退出；保留原生控制、进度定位、全屏与本机进度恢复。
+- 播放器“播放信息”记录 loadedmetadata、canplay、实际首帧和错误码，仅保留当前页面内存，不发送遥测。首帧优先使用 requestVideoFrameCallback；旧浏览器用 loadeddata 估计并明确标记。
 - `work/`、`qa/`、音频中间文件、MP4及本地工程路径不纳入仓库。
 - 音乐、图像、知识来源与版权联系入口见网站`sources.html`和`PUBLIC_MEDIA_LICENSES.md`。
 
