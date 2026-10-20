@@ -14,7 +14,7 @@
       "music": "Original procedural composition; no third-party song/recording/sample",
       "loudnessLUFS": -18.5,
       "truePeakDbTP": -4.13,
-      "url": "https://github.com/tsy7653-design/vibe-science-gallery/releases/download/public-v1/black-hole-720p.mp4"
+      "url": "videos/black-hole-720p.mp4"
     },
     {
       "id": "vertical-motion",
@@ -45,5 +45,5 @@
       "url": "https://github.com/tsy7653-design/vibe-science-gallery/releases/download/public-v1/radian-720p.mp4"
     }
   ],
-  "delivery": "GitHub Pages main:/docs; media from public-v1 Release attachments"
+  "delivery": "main:/docs; black-hole uses same-origin videos/; other two remain unchanged Release attachments pending iPhone confirmation"
 }

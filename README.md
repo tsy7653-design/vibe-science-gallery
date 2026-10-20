@@ -8,10 +8,10 @@
 
 ## 媒体与部署
 
-- MP4只保存在本仓库`public-v1` Release附件中，不提交到Git历史；仅公开经过审核、替换为原创配乐的720p版本。
+- 仅公开经过审核、替换为原创配乐的720p版本。首轮 iPhone 修复按用户授权将一条黑洞 MP4 放入 `docs/videos/`，由 Pages 同源直接播放；其余两条暂保留 Release 附件，等待手机确认后再扩展。
 - GitHub Pages 发布源选择 **Deploy from a branch → main → /docs → Save**。
 - 不上传自定义 `.github/workflows` 文件，不申请额外 workflow 权限。GitHub 自身仍会执行托管的 Pages 构建与部署。
-- 网页直接引用 `public-v1` Release 的三条已审核附件；公开 CDN 支持 HTTP Range。附件大小及 SHA-256 记录于 `media-sha256.txt` 和 `docs/media/manifest.json`。
+- 黑洞在线播放使用相对路径 `videos/black-hole-720p.mp4`，不再经过 Release 下载重定向。大小及 SHA-256 记录于 `media-sha256.txt` 和 `docs/media/manifest.json`。播放器“播放信息”提供仅在当前页面保留的加载事件与错误码，不发送遥测。
 - `work/`、`qa/`、音频中间文件、MP4及本地工程路径不纳入仓库。
 - 音乐、图像、知识来源与版权联系入口见网站`sources.html`和`PUBLIC_MEDIA_LICENSES.md`。
 
