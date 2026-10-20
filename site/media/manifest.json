@@ -1,0 +1,45 @@
+{
+  "edition": "Public original-score edition",
+  "version": "public-v1",
+  "items": [
+    {
+      "id": "black-hole",
+      "file": "black-hole-720p.mp4",
+      "duration": 112,
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "bytes": 27327998,
+      "sha256": "639fe2dcf94b9ec85e6e395d6b5286c12199f1d79f3094e3a3dfcfb7860f652c",
+      "music": "Original procedural composition; no third-party song/recording/sample",
+      "loudnessLUFS": -18.5,
+      "truePeakDbTP": -4.13
+    },
+    {
+      "id": "vertical-motion",
+      "file": "vertical-motion-720p.mp4",
+      "duration": 100,
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "bytes": 7623143,
+      "sha256": "ba064faca2bb73400a5cefa5fe4d3837b61a83f73eab72f7de61c0debea153b1",
+      "music": "Original procedural composition; no third-party song/recording/sample",
+      "loudnessLUFS": -18.51,
+      "truePeakDbTP": -7.02
+    },
+    {
+      "id": "radian",
+      "file": "radian-720p.mp4",
+      "duration": 148,
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "bytes": 10748323,
+      "sha256": "e49ed8e939cc8a90d1d4a814b5ab009ef9be120169802e8dfab19aecc26a08b1",
+      "music": "Original procedural composition; no third-party song/recording/sample",
+      "loudnessLUFS": -18.66,
+      "truePeakDbTP": -2.84
+    }
+  ]
+}

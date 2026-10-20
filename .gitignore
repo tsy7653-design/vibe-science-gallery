@@ -1,0 +1,8 @@
+work/
+qa/
+site/media/*.mp4
+*.wav
+*.f32
+.DS_Store
+Thumbs.db
+*.log
