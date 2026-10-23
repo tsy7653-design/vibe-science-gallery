@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "file": "assets/three-earth-actual.png",
+      "bytes": 418131,
+      "sha256": "4ca9e7400fcd19352ff113445953a686fd27d2d5c48cb7cb4e7c17ca10e500ae"
+    },
+    {
+      "file": "assets/apogee-actual.png",
+      "bytes": 168077,
+      "sha256": "b4758033cf35cb0378466ab147b119c551709f817dc4a37e2774841ef4741c0a"
+    },
+    {
+      "file": "assets/nasa-svs5632-official.jpg",
+      "bytes": 292880,
+      "sha256": "8ad6276b4a91795cb68c0472913e38cfb64fce23f4a99cd4a72889c6329deafd"
+    },
+    {
+      "file": "assets/three-earth-reference-8s.mp4",
+      "bytes": 951318,
+      "sha256": "f22ad76f49c7a863406f5f7a929168e4fe174b6889f0899cb81652e346cc6814"
+    },
+    {
+      "file": "assets/nasa-reference-8s.mp4",
+      "bytes": 932572,
+      "sha256": "e1c4493d4e33ab92cf935a83617a025c5362c4c3015bcbc5c0799e906a510c65"
+    },
+    {
+      "file": "licenses/threejs-MIT.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "file": "licenses/apogee-MIT.txt",
+      "bytes": 1069,
+      "sha256": "06e382821b927b67c12ecbb31902a99d00bfbbc206d72a822d872d39de908e03"
+    }
+  ]
+}

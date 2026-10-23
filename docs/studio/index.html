@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f5f2e9">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="description" content="VIBE SCIENCE 创作审片室：从一个好问题，到一部看得懂的科学短片。审查叙事、分镜与真实动态样片。">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; media-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Studio · VIBE SCIENCE 创作审片室</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="studio.css?v=studio-1">
+  <script defer src="studio.js?v=studio-1"></script>
+</head>
+<body>
+<a class="skip" href="#project">跳到当前项目</a>
+<header class="top wrap">
+  <a class="brand" href="../" aria-label="VIBE SCIENCE 正式视频馆"><span class="brand-mark" aria-hidden="true">v<span>•</span></span><span>VIBE <b>SCIENCE</b><small>STUDIO / 创作审片室</small></span></a>
+  <a class="gallery-link" href="../">正式作品 <span aria-hidden="true">↗</span></a>
+</header>
+<main class="wrap">
+  <section class="studio-intro" aria-labelledby="studio-title">
+    <div><p class="eyebrow">BEFORE THE FINAL CUT</p><h1 id="studio-title">好故事，<em>从这里打磨。</em></h1><p class="intro-copy">先看思路，再看画面。把你的直觉，带进下一版。</p></div>
+    <div class="project-switch"><label for="project-select">审查项目</label><select id="project-select" disabled><option>正在读取项目…</option></select><p>公开可访问 · 不自动提交意见</p></div>
+  </section>
+  <nav class="section-nav" aria-label="审片内容"><a href="#project">项目</a><a href="#plans">三种叙事</a><a href="#timeline">分镜</a><a href="#references">资源</a><a href="#previews">样片</a><a href="#feedback">我的意见</a></nav>
+  <p class="load-status" id="load-status" role="status">正在整理审查卡片…</p>
+  <div id="project-content" hidden>
+    <section id="project" class="project-section" aria-labelledby="project-title"></section>
+    <section id="plans" class="section" aria-labelledby="plans-title"><div class="section-heading"><div><p class="eyebrow">01 / THE STORY</p><h2 id="plans-title">同一个问题，三种讲法。</h2></div><p>先比较讲解思路；叙事方案不等于美术风格。</p></div><div id="plan-comparison" class="comparison"></div><div id="plan-cards" class="plan-grid"></div><details class="detail-panel"><summary>另有三种视觉方向，尚未制作或选定</summary><div id="visual-directions"></div></details></section>
+    <section id="timeline" class="section" aria-labelledby="timeline-title"><div class="section-heading"><div><p class="eyebrow">02 / SHOT BY SHOT</p><h2 id="timeline-title">让理解，一步步发生。</h2></div><p id="timeline-note"></p></div><p class="section-help">点开每段，查看画面、理解目标、动画与素材分工。</p><div id="timeline-list" class="timeline"></div></section>
+    <section id="references" class="section" aria-labelledby="references-title"><div class="section-heading"><div><p class="eyebrow">03 / WHAT WE CAN BUILD ON</p><h2 id="references-title">优秀资源，清楚取舍。</h2></div><p>图片可点开放大。实测、官方预览与创作设想分开标注。</p></div><div id="resource-cards" class="resource-grid"></div><details class="detail-panel"><summary>科学边界与容易误解的地方</summary><ul id="science-risks"></ul><p class="model-note" id="model-note"></p></details><details class="detail-panel"><summary>资料来源与公开素材许可</summary><div id="source-list"></div><a href="credits.html">完整素材署名与许可说明 ↗</a></details></section>
+    <section id="previews" class="section" aria-labelledby="previews-title"><div class="section-heading"><div><p class="eyebrow">04 / MOTION CHECK</p><h2 id="previews-title">让画面，接受检验。</h2></div><p>只有真实完成并获准公开的版本，才会出现在这里。</p></div><div id="project-previews"></div><details class="detail-panel"><summary>第三轮建议制作哪些关键样片？</summary><div id="next-previews"></div></details><div id="reference-clips"></div></section>
+    <section id="versions" class="section compact" aria-labelledby="versions-title"><div class="section-heading"><div><p class="eyebrow">VERSION NOTES</p><h2 id="versions-title">这一版，走到了哪里？</h2></div></div><div id="version-list"></div></section>
+    <section id="feedback" class="section feedback" aria-labelledby="feedback-title"><p class="eyebrow">05 / YOUR DIRECTION</p><h2 id="feedback-title">下一步，听你的。</h2><p>选一个倾向，留下几句话，再复制回 Codex。推荐方案不会自动成为你的选择。</p><fieldset><legend>我倾向的叙事方案</legend><div id="preference-options" class="preference-options"></div></fieldset><label class="comment-label" for="review-comment">简短意见 <span>例如：保留 A 的主线，结尾借用 C 的远行感。</span></label><textarea id="review-comment" rows="4" maxlength="2000" placeholder="哪些地方吸引你？哪里还不够清楚？"></textarea><p id="save-state" class="small-note" role="status"></p><div class="feedback-actions"><button type="button" class="button primary" id="copy-feedback">复制选择与意见 <span aria-hidden="true">↗</span></button><button type="button" class="button secondary" id="reset-feedback">清空本机草稿</button></div><p id="copy-status" role="status" aria-live="polite"></p><div id="copy-fallback" hidden><label for="feedback-text">请长按全选并复制以下内容：</label><textarea id="feedback-text" rows="9" readonly></textarea></div><p class="small-note">草稿只保存在此浏览器，不会自动同步或发送。更换手机、浏览器或使用无痕模式时可能无法保留；请勿填写密码等敏感信息。</p></section>
+  </div>
+  <noscript><p class="error">审片卡片需要 JavaScript。请启用后刷新；正式视频馆仍可从上方链接访问。</p></noscript>
+</main>
+<footer class="wrap footer"><a class="footer-brand" href="../">VIBE SCIENCE <span>保持好奇，慢慢看懂。</span></a><div><a href="credits.html">Studio 素材署名</a><a href="https://github.com/tsy7653-design/vibe-science-gallery/issues/new?title=Copyright%20or%20contact" target="_blank" rel="noopener noreferrer">版权联系 ↗</a></div><p>© 2026 VIBE SCIENCE · 创作过程页面，尚未定稿。公开可访问；noindex 不构成访问控制。无广告、无跟踪脚本。</p></footer>
+<dialog id="image-viewer" aria-labelledby="image-title"><div class="image-toolbar"><h2 id="image-title">参考图</h2><button class="close" id="close-image" type="button" aria-label="关闭参考图">×</button></div><div class="image-scroll"><img id="full-image" alt=""></div><p id="image-credit"></p><a id="original-image" href="#" target="_blank" rel="noopener">打开原图，可双指放大 ↗</a></dialog>
+</body>
+</html>
