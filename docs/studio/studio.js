@@ -64,8 +64,10 @@
         h('div', {class: 'hero-picture'}, imageButton(hero, true), h('span', {class: 'figure-label'}, 'Three.js 既有 Demo 实测 · 资源参考，非本片成品'))),
       h('ol', {class: 'stage-list', 'aria-label': '制作进度'}, stages.map((name, i) => h('li', {class: i === project.stageIndex ? 'current' : i < project.stageIndex ? 'complete' : ''}, name, h('small', {}, i === project.stageIndex ? '当前 · 待审核' : i < project.stageIndex ? '已完成' : '尚未开始')))),
       h('aside', {class: 'editor-note'}, h('strong', {}, project.recommendationTitle), project.recommendation));
+    if (project.previews.some(clip => clip.publicApproved)) $('project').append(h('div', {class: 'feedback-actions'}, h('a', {class: 'button primary', href: '#previews'}, '观看本轮三段动态样片 ↗'), p('A / B / C 各15秒 · 另有45秒连续对比 · 不自动选定方案', 'small-note')));
   }
   function renderPlans() {
+    $('visual-directions').parentElement.querySelector('summary').textContent = project.stageIndex === 2 ? '本轮采用的三种视觉表达，最终方向待选择' : '另有三种视觉方向，尚未制作或选定';
     $('visual-directions').replaceChildren(...(project.visualDirections || []).map(item => h('div', {class: 'preview-plan'}, h('h4', {}, `${item.id} · ${item.title}`), p(item.description))));
     $('plan-comparison').replaceChildren(...project.narratives.map(plan => {
       const a = h('a', {href: `#plan-${plan.id}`, 'data-open-plan': plan.id}, h('b', {}, plan.id), h('strong', {}, plan.title), h('span', {}, plan.pitch));
@@ -78,7 +80,9 @@
         h('div', {class: 'plan-summary'}, plan.recommended ? h('span', {class: 'recommended'}, '编导推荐 · 尚待你选择') : h('span', {class: 'recommended'}, plan.subtitle), h('h3', {}, plan.title), p(`${plan.duration} · ${plan.pitch}`)), h('span', {class: 'toggle', 'aria-hidden': 'true'}, '+'));
       const dl = h('dl');
       [['开场吸引点', plan.hook], ['讲解逻辑', plan.logic], ['物理揭示', plan.reveal], ['结尾构想', plan.ending]].forEach(([title, text]) => dl.append(h('dt', {}, title), h('dd', {}, text)));
-      details.append(summary, h('div', {class: 'plan-content'}, dl, h('div', {class: 'pros-cons'}, h('div', {}, h('strong', {}, '为什么值得拍'), plan.pros), h('div', {}, h('strong', {}, '代价与风险'), plan.cons))));
+      const clip = project.previews.find(item => item.planId === plan.id && item.publicApproved === true);
+      if (clip) summary.querySelector('.plan-summary').append(p(`${clip.durationLabel}动态样片已完成 · 展开即可播放`, 'available-preview'));
+      details.append(summary, h('div', {class: 'plan-content'}, clip ? h('div', {class: 'plan-preview', id: `preview-plan-${plan.id}`}, makeVideo(clip, false)) : null, dl, h('div', {class: 'pros-cons'}, h('div', {}, h('strong', {}, '为什么值得拍'), plan.pros), h('div', {}, h('strong', {}, '代价与风险'), plan.cons))));
       return details;
     }));
     const wanted = new URL(location.href).hash.match(/^#plan-([ABC])$/)?.[1];
@@ -101,8 +105,8 @@
   }
   function makeVideo(clip, reference) {
     const video = h('video', {controls: '', playsinline: '', 'webkit-playsinline': '', preload: 'none', poster: safeAsset(clip.poster), 'aria-label': clip.title});
-    const button = h('button', {type: 'button', class: 'load-clip', 'aria-label': `播放：${clip.title}`}, h('span', {'aria-hidden': 'true'}, '▷'), h('span', {}, '点按加载并播放'));
-    const state = p('点击后才加载视频 · 无声参考片段', 'clip-state');
+    const button = h('button', {type: 'button', class: 'load-clip', 'aria-label': `播放：${clip.title}`}, h('span', {'aria-hidden': 'true'}, '▷'), h('span', {}, reference ? '播放资源参考片段' : '播放动态样片'));
+    const state = p(`点击后才加载视频 · ${reference ? '无声参考片段' : '原创轻量声音 · 无旁白'}`, 'clip-state');
     const shell = h('div', {class: 'clip-shell'}, video, button);
     for (const event of ['loadedmetadata', 'canplay', 'playing', 'waiting', 'seeked', 'error']) video.addEventListener(event, () => {
       mediaEvents.push({id: clip.id, event, currentTime: video.currentTime, error: video.error?.code || null});
@@ -115,12 +119,21 @@
       const play = video.play();
       play?.catch(() => { state.textContent = '请点播放器中的播放按钮继续。'; });
     }, {once: true});
-    const card = h('article', {class: 'clip-card'}, h('span', {class: 'resource-category'}, reference ? '既有资源参考 · 不是本项目生成样片' : `本项目实际样片 · ${clip.version}`), h('h4', {}, clip.title), p(clip.note), shell, state, link('直接打开 MP4 ↗', safeAsset(clip.src)));
+    const card = h('article', {class: 'clip-card', 'data-clip-id': clip.id}, h('span', {class: 'resource-category'}, reference ? '既有资源参考 · 不是本项目生成样片' : `${clip.durationLabel} · ${clip.version} · 已完成 / 待你选择`), h('h4', {}, clip.title), p(clip.note), shell, state, link('直接打开 MP4 ↗', safeAsset(clip.src)));
+    if (!reference && clip.strength) card.append(h('details', {class: 'clip-review'}, h('summary', {}, '视觉与教学取舍'), p(`优势：${clip.strength}`), p(`局限：${clip.limitation}`)));
     return card;
   }
   function renderPreviews() {
+    $('next-previews').parentElement.querySelector('summary').textContent = project.stageIndex === 2 ? '本轮三段预览分别展示了什么？' : '第三轮建议制作哪些关键样片？';
     const approved = project.previews.filter(clip => clip.publicApproved === true);
-    $('project-previews').replaceChildren(approved.length ? h('div', {class: 'clip-grid'}, approved.map(clip => makeVideo(clip, false))) : h('div', {class: 'empty-state'}, h('h3', {}, '尚无动态样片'), p('本项目目前完成了资源侦察与第二轮片前设计。下面的参考片段用于评估现有资源，不能代表本片已完成的镜头。')));
+    if (approved.length) {
+      const shortcuts = approved.map(clip => {
+        const button = h('button', {type: 'button', class: 'button secondary', 'data-play-plan': clip.planId}, `播放方案 ${clip.planId} · ${clip.durationLabel}`);
+        button.addEventListener('click', () => { $(`plan-${clip.planId}`).open = true; const slot = $(`preview-plan-${clip.planId}`); slot.scrollIntoView({behavior: 'smooth', block: 'center'}); const play = slot.querySelector('.load-clip'); if (!play.hidden) play.click(); else slot.querySelector('video').play().catch(() => {}); });
+        return button;
+      });
+      $('project-previews').replaceChildren(p('三段真实动态样片已在各自方案卡片中就位。先分别看，也可以连续对比；它们各取代表性转折，不是同一画面的换标题版本。'), h('div', {class: 'feedback-actions'}, shortcuts), project.comparison?.publicApproved ? makeVideo(project.comparison, false) : null);
+    } else $('project-previews').replaceChildren(h('div', {class: 'empty-state'}, h('h3', {}, '尚无动态样片'), p('本项目目前完成了资源侦察与第二轮片前设计。下面的参考片段用于评估现有资源，不能代表本片已完成的镜头。')));
     $('next-previews').replaceChildren(...project.nextPreviews.map(item => h('div', {class: 'preview-plan'}, h('h4', {}, item.title), p(item.description))), p(project.nextGate, 'model-note'));
     $('reference-clips').replaceChildren(h('h3', {class: 'reference-heading'}, '已有的资源参考片段'), p('两个 8 秒无声片段，来自上一轮实测／官方影像；仅点按的那一段才加载。', 'reference-intro'), h('div', {class: 'clip-grid'}, project.referenceClips.filter(clip => clip.publicApproved).map(clip => makeVideo(clip, true))));
   }
@@ -161,7 +174,7 @@
     const plan = project.narratives.find(item => item.id === choice);
     const selected = plan ? `${plan.id}｜${plan.title}` : choice === 'blend' ? '融合方案' : '暂未决定';
     const url = new URL(location.href); url.searchParams.set('project', project.id); url.hash = 'feedback';
-    const text = [`VIBE SCIENCE｜Studio 反馈`, `项目：${project.title}`, `审查版本：${project.version}（${project.updatedAt}）`, `我的倾向：${selected}`, `简短意见：${$('review-comment').value.trim() || '暂无补充，请先讨论方案。'}`, `审查入口：${url.href}`, `本反馈针对片前方案；尚未进行动态样片确认。`].join('\n');
+    const text = [`VIBE SCIENCE｜Studio 反馈`, `项目：${project.title}`, `审查版本：${project.version}（${project.updatedAt}）`, `我的倾向：${selected}`, `简短意见：${$('review-comment').value.trim() || '暂无补充，请先讨论方案。'}`, `审查入口：${url.href}`, project.stageIndex === 2 ? '本反馈针对 A/B/C 动态样片；请结合意见讨论下一步，不自动开始完整版。' : '本反馈针对片前方案；尚未进行动态样片确认。'].join('\n');
     const fallback = () => {
       $('feedback-text').value = text;
       $('copy-fallback').hidden = false;
@@ -177,7 +190,7 @@
   $('image-viewer').addEventListener('click', e => { const r = e.currentTarget.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) e.currentTarget.close(); });
   $('project-select').addEventListener('change', e => loadProject(e.target.value, true).catch(fail));
   function fail(error) { $('load-status').hidden = false; $('load-status').className = 'error'; $('load-status').textContent = `${error.message}。请稍后刷新；不会影响正式作品馆。`; }
-  fetch('data/catalog.json?v=studio-1').then(async response => {
+  fetch('data/catalog.json?v=studio-r3-1').then(async response => {
     if (!response.ok) throw new Error(`目录暂未载入（HTTP ${response.status}）`);
     catalog = await response.json();
     if (catalog.schemaVersion !== 1 || !catalog.projects?.length) throw new Error('审片目录为空或版本不兼容');

@@ -35,6 +35,46 @@
       "file": "licenses/apogee-MIT.txt",
       "bytes": 1069,
       "sha256": "06e382821b927b67c12ecbb31902a99d00bfbbc206d72a822d872d39de908e03"
+    },
+    {
+      "file": "assets/escape-r3-v1/plan-A-15s.mp4",
+      "bytes": 2249488,
+      "sha256": "4259dbf5f521045012a63124b93890dc0918fdb7b46c04845e8cd7a686bbe112"
+    },
+    {
+      "file": "assets/escape-r3-v1/plan-A-poster.jpg",
+      "bytes": 73257,
+      "sha256": "c822785d1c89d56f2b90f7abd08dcaa68630aa711b4d1d9bee782ea1b16ab33b"
+    },
+    {
+      "file": "assets/escape-r3-v1/plan-B-15s.mp4",
+      "bytes": 3206632,
+      "sha256": "728631511039eef68c5995bbd56b8026b4f1a2f5abe044fe7ca94ad5019eae89"
+    },
+    {
+      "file": "assets/escape-r3-v1/plan-B-poster.jpg",
+      "bytes": 83105,
+      "sha256": "7f0a3cb25eb0e0e157af6dd111f663d2b501bbc609cbd6e6088c2100d1f22bd0"
+    },
+    {
+      "file": "assets/escape-r3-v1/plan-C-15s.mp4",
+      "bytes": 3391750,
+      "sha256": "984452724d42fab0e0f5c54f861a23e2a94e05092bbbc2c85c6e7aeeb98e934e"
+    },
+    {
+      "file": "assets/escape-r3-v1/plan-C-poster.jpg",
+      "bytes": 116329,
+      "sha256": "006ec88077575b4c53beb147e8236e0aa67f8da9209735485b93e7a7a264b3b4"
+    },
+    {
+      "file": "assets/escape-r3-v1/ABC-comparison-45s.mp4",
+      "bytes": 8848525,
+      "sha256": "2fa87b2d85f28627d5a98ed2bcbbea43bae5bf781f34eeeb96f94cceac0a4c14"
+    },
+    {
+      "file": "assets/escape-r3-v1/ABC-comparison-poster.jpg",
+      "bytes": 70766,
+      "sha256": "a17731922335e8ff13cd8a59bbd24e0c5bcaf63159621dceb2b07d382e7a7625"
     }
   ]
 }

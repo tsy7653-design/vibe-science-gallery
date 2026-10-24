@@ -7,3 +7,4 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 /* Keep intrinsic HTML dimensions from fixing the mobile hero to 720px tall. */
 .hero-picture img{height:auto}
+.available-preview{color:var(--green)!important;font-weight:650}.plan-preview{margin:0 0 24px}.plan-preview .clip-card{padding:18px;background:#f4f3e9;border-radius:12px}.plan-preview .clip-shell{margin-top:12px}.clip-review{font-size:12px;margin-top:15px;padding-top:10px;border-top:1px solid var(--line)}.clip-review summary{cursor:pointer;min-height:35px}.clip-review p{font-size:12px;margin-bottom:8px}#project-previews>.clip-card{margin-top:25px}#project-previews>.feedback-actions{margin-bottom:23px}

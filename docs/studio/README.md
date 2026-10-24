@@ -15,6 +15,7 @@
 - 尚未制作动态样片时保留 `previews: []`，页面明确显示“尚无动态样片”。
 - 资源实测录制与官方素材放 `referenceClips`，不能移到 `previews` 冒充本项目作品。
 - 真实制作完成的样片加入 `previews`：`{id,title,version,src,poster,note,publicApproved:true}`。没有核实公开许可的文件不得上传，不能仅靠前端隐藏。
+- 方案卡片内的样片另加 `planId`（对应narratives的id）、`duration`、`durationLabel`、`status`；可加`strength`和`limitation`。每方案播放器只创建一次，样片区的快捷按钮打开对应卡片并播放。连续对比片可放`comparison`，结构与样片相同。
 - H.264/AAC（无声样片可无AAC）、yuv420p、faststart，默认720p。视频默认无src，点按后才加载；不复用Release下载链接做在线播放源。
 - 使用新文件名保存视频版本，保留旧版；不要覆盖旧MP4。增加 `history` 解释变化，更新项目 `version` 与 `updatedAt`。
 - 修改数据后更新版本/缓存标记（HTML中的CSS/JS查询串、JS目录查询串）；不要只改文件而让手机长期显示旧内容。
