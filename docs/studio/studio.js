@@ -108,10 +108,10 @@
     const button = h('button', {type: 'button', class: 'load-clip', 'aria-label': `播放：${clip.title}`}, h('span', {'aria-hidden': 'true'}, '▷'), h('span', {}, reference ? '播放资源参考片段' : '播放动态样片'));
     const state = p(`点击后才加载视频 · ${reference ? '无声参考片段' : '原创轻量声音 · 无旁白'}`, 'clip-state');
     const shell = h('div', {class: 'clip-shell'}, video, button);
-    for (const event of ['loadedmetadata', 'canplay', 'playing', 'waiting', 'seeked', 'error']) video.addEventListener(event, () => {
+    for (const event of ['loadedmetadata', 'canplay', 'playing', 'waiting', 'seeked', 'pause', 'ended', 'error']) video.addEventListener(event, () => {
       mediaEvents.push({id: clip.id, event, currentTime: video.currentTime, error: video.error?.code || null});
       video.dataset.state = event;
-      state.textContent = event === 'error' ? `视频暂未能载入（${video.error?.code || '未知错误'}），可打开 MP4 重试。` : event === 'waiting' ? '正在缓冲…' : event === 'playing' ? '正在播放 · 可拖动进度 / 使用原生全屏' : event === 'seeked' ? '已定位到所选时间' : '视频已就绪 · 原生控制可用';
+      state.textContent = event === 'error' ? `视频暂未能载入（${video.error?.code || '未知错误'}），可打开 MP4 重试。` : event === 'waiting' ? '正在缓冲…' : event === 'playing' ? '正在播放 · 可拖动进度 / 使用原生全屏' : event === 'pause' ? '已暂停 · 可继续播放或拖动进度' : event === 'ended' ? '已播放完毕 · 可再次播放' : event === 'seeked' ? '已定位到所选时间' : '视频已就绪 · 原生控制可用';
     });
     button.addEventListener('click', () => {
       document.querySelectorAll('video').forEach(other => { if (other !== video) other.pause(); });
