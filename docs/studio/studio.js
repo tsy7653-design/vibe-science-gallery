@@ -64,10 +64,10 @@
         h('div', {class: 'hero-picture'}, imageButton(hero, true), h('span', {class: 'figure-label'}, 'Three.js 既有 Demo 实测 · 资源参考，非本片成品'))),
       h('ol', {class: 'stage-list', 'aria-label': '制作进度'}, stages.map((name, i) => h('li', {class: i === project.stageIndex ? 'current' : i < project.stageIndex ? 'complete' : ''}, name, h('small', {}, i === project.stageIndex ? '当前 · 待审核' : i < project.stageIndex ? '已完成' : '尚未开始')))),
       h('aside', {class: 'editor-note'}, h('strong', {}, project.recommendationTitle), project.recommendation));
-    if (project.previews.some(clip => clip.publicApproved)) $('project').append(h('div', {class: 'feedback-actions'}, h('a', {class: 'button primary', href: '#previews'}, project.fusion ? '观看A+C融合样片 ↗' : '观看本轮三段动态样片 ↗'), p(project.fusion ? 'A+C已选定 · 32秒融合效果待确认 · 原A/B/C保留' : 'A / B / C 各15秒 · 另有45秒连续对比 · 不自动选定方案', 'small-note')));
+    if (project.previews.some(clip => clip.publicApproved)) $('project').append(h('div', {class: 'feedback-actions'}, h('a', {class: 'button primary', href: '#previews'}, project.formalReview ? '观看V1未定稿审查版 ↗' : project.fusion ? '观看A+C融合样片 ↗' : '观看本轮三段动态样片 ↗'), p(project.formalReview ? '198秒完整版 · 720p · 仅供审查，未正式上架' : project.fusion ? 'A+C已选定 · 32秒融合效果待确认 · 原A/B/C保留' : 'A / B / C 各15秒 · 另有45秒连续对比 · 不自动选定方案', 'small-note')));
   }
   function renderPlans() {
-    $('visual-directions').parentElement.querySelector('summary').textContent = project.stageIndex === 2 ? project.fusion ? '已选择A+C；以下保留原三种表达供比较' : '本轮采用的三种视觉表达，最终方向待选择' : '另有三种视觉方向，尚未制作或选定';
+    $('visual-directions').parentElement.querySelector('summary').textContent = project.formalReview ? 'A+C已确认，保留原视觉方案供比较' : project.stageIndex === 2 ? project.fusion ? '已选择A+C；以下保留原三种表达供比较' : '本轮采用的三种视觉表达，最终方向待选择' : '另有三种视觉方向，尚未制作或选定';
     $('visual-directions').replaceChildren(...(project.visualDirections || []).map(item => h('div', {class: 'preview-plan'}, h('h4', {}, `${item.id} · ${item.title}`), p(item.description))));
     $('plan-comparison').replaceChildren(...project.narratives.map(plan => {
       const a = h('a', {href: `#plan-${plan.id}`, 'data-open-plan': plan.id}, h('b', {}, plan.id), h('strong', {}, plan.title), h('span', {}, plan.pitch));
@@ -119,12 +119,12 @@
       const play = video.play();
       play?.catch(() => { state.textContent = '请点播放器中的播放按钮继续。'; });
     }, {once: true});
-    const card = h('article', {class: 'clip-card', 'data-clip-id': clip.id}, h('span', {class: 'resource-category'}, reference ? '既有资源参考 · 不是本项目生成样片' : `${clip.durationLabel} · ${clip.version} · 已完成 / 待你选择`), h('h4', {}, clip.title), p(clip.note), shell, state, link('直接打开 MP4 ↗', safeAsset(clip.src)));
+    const card = h('article', {class: 'clip-card', 'data-clip-id': clip.id}, h('span', {class: 'resource-category'}, reference ? '既有资源参考 · 不是本项目生成样片' : `${clip.durationLabel} · ${clip.version} · ${clip.statusLabel || '已完成 / 待你选择'}`), h('h4', {}, clip.title), p(clip.note), shell, state, link('直接打开 MP4 ↗', safeAsset(clip.src)));
     if (!reference && clip.strength) card.append(h('details', {class: 'clip-review'}, h('summary', {}, '视觉与教学取舍'), p(`优势：${clip.strength}`), p(`局限：${clip.limitation}`)));
     return card;
   }
   function renderPreviews() {
-    $('next-previews').parentElement.querySelector('summary').textContent = project.stageIndex === 2 ? project.fusion ? '下一步：融合片确认后再制作完整版' : '本轮三段预览分别展示了什么？' : '第三轮建议制作哪些关键样片？';
+    $('next-previews').parentElement.querySelector('summary').textContent = project.formalReview ? 'V1主观审查重点' : project.stageIndex === 2 ? project.fusion ? '下一步：融合片确认后再制作完整版' : '本轮三段预览分别展示了什么？' : '第三轮建议制作哪些关键样片？';
     const approved = project.previews.filter(clip => clip.publicApproved === true);
     if (approved.length) {
       const shortcuts = approved.map(clip => {
@@ -132,7 +132,7 @@
         button.addEventListener('click', () => { $(`plan-${clip.planId}`).open = true; const slot = $(`preview-plan-${clip.planId}`); slot.scrollIntoView({behavior: 'smooth', block: 'center'}); const play = slot.querySelector('.load-clip'); if (!play.hidden) play.click(); else slot.querySelector('video').play().catch(() => {}); });
         return button;
       });
-      $('project-previews').replaceChildren(project.fusion ? h('section', {id:'fusion', class:'fusion-review'}, h('h3', {}, '本轮重点：A+C融合版'), makeVideo(project.fusion, false)) : null, p('原三段真实动态样片已在各自方案卡片中就位。先分别看，也可以连续对比；它们各取代表性转折，不是同一画面的换标题版本。'), h('div', {class: 'feedback-actions'}, shortcuts), project.comparison?.publicApproved ? makeVideo(project.comparison, false) : null);
+      $('project-previews').replaceChildren(project.formalReview ? h('section', {id:'formal-review'}, h('h3', {}, '本轮重点：完整版 V1（未定稿）'), makeVideo(project.formalReview, false)) : null, project.fusion ? h('section', {id:'fusion', class:'fusion-review'}, h('h3', {}, '本轮重点：A+C融合版'), makeVideo(project.fusion, false)) : null, p('原三段真实动态样片已在各自方案卡片中就位。先分别看，也可以连续对比；它们各取代表性转折，不是同一画面的换标题版本。'), h('div', {class: 'feedback-actions'}, shortcuts), project.comparison?.publicApproved ? makeVideo(project.comparison, false) : null);
     } else $('project-previews').replaceChildren(h('div', {class: 'empty-state'}, h('h3', {}, '尚无动态样片'), p('本项目目前完成了资源侦察与第二轮片前设计。下面的参考片段用于评估现有资源，不能代表本片已完成的镜头。')));
     $('next-previews').replaceChildren(...project.nextPreviews.map(item => h('div', {class: 'preview-plan'}, h('h4', {}, item.title), p(item.description))), p(project.nextGate, 'model-note'));
     $('reference-clips').replaceChildren(h('h3', {class: 'reference-heading'}, '已有的资源参考片段'), p('两个 8 秒无声片段，来自上一轮实测／官方影像；仅点按的那一段才加载。', 'reference-intro'), h('div', {class: 'clip-grid'}, project.referenceClips.filter(clip => clip.publicApproved).map(clip => makeVideo(clip, true))));
@@ -142,7 +142,7 @@
   }
   function renderFeedback() {
     const draft = readDraft();
-    const options = project.narratives.map(plan => [plan.id, `方案 ${plan.id}`]).concat(project.fusion ? [['AC', 'A+C融合效果反馈']] : []).concat([['blend', '融合方案'], ['undecided', '暂未决定']]);
+    const options = project.narratives.map(plan => [plan.id, `方案 ${plan.id}`]).concat(project.formalReview ? [['V1', 'V1完整版审查意见']] : []).concat(project.fusion ? [['AC', 'A+C融合效果反馈']] : []).concat([['blend', '融合方案'], ['undecided', '暂未决定']]);
     $('preference-options').replaceChildren(...options.map(([value, label]) => {
       const input = h('input', {type: 'radio', name: 'preference', value});
       input.checked = draft.choice === value;
@@ -165,6 +165,7 @@
     $('project-select').value = project.id;
     $('project-content').hidden = false;
     $('load-status').hidden = true;
+    if (location.hash === '#formal-review') requestAnimationFrame(() => $('formal-review')?.scrollIntoView());
     if (location.hash === '#fusion') requestAnimationFrame(() => $('fusion')?.scrollIntoView());
     if (updateUrl) { const url = new URL(location.href); url.searchParams.set('project', project.id); url.hash = 'project'; history.replaceState(null, '', url); }
   }
@@ -173,9 +174,9 @@
   $('copy-feedback').addEventListener('click', () => {
     const choice = document.querySelector('input[name="preference"]:checked')?.value;
     const plan = project.narratives.find(item => item.id === choice);
-    const selected = plan ? `${plan.id}｜${plan.title}` : choice === 'AC' ? 'A+C融合效果反馈' : choice === 'blend' ? '融合方案' : '暂未决定';
+    const selected = plan ? `${plan.id}｜${plan.title}` : choice === 'V1' ? 'V1完整版审查意见' : choice === 'AC' ? 'A+C融合效果反馈' : choice === 'blend' ? '融合方案' : '暂未决定';
     const url = new URL(location.href); url.searchParams.set('project', project.id); url.hash = 'feedback';
-    const text = [`VIBE SCIENCE｜Studio 反馈`, `项目：${project.title}`, `审查版本：${project.version}（${project.updatedAt}）`, `我的倾向：${selected}`, `简短意见：${$('review-comment').value.trim() || '暂无补充，请先讨论方案。'}`, `审查入口：${url.href}`, project.stageIndex === 2 ? project.fusion ? '本反馈针对A+C融合验证，不自动开始完整版。' : '本反馈针对 A/B/C 动态样片；请结合意见讨论下一步，不自动开始完整版。' : '本反馈针对片前方案；尚未进行动态样片确认。'].join('\n');
+    const text = [`VIBE SCIENCE｜Studio 反馈`, `项目：${project.title}`, `审查版本：${project.version}（${project.updatedAt}）`, `我的倾向：${selected}`, `简短意见：${$('review-comment').value.trim() || '暂无补充，请先讨论方案。'}`, `审查入口：${url.href}`, project.formalReview ? '本反馈针对未定稿V1，不自动上架正式视频馆。' : project.stageIndex === 2 ? project.fusion ? '本反馈针对A+C融合验证，不自动开始完整版。' : '本反馈针对 A/B/C 动态样片；请结合意见讨论下一步，不自动开始完整版。' : '本反馈针对片前方案；尚未进行动态样片确认。'].join('\n');
     const fallback = () => {
       $('feedback-text').value = text;
       $('copy-fallback').hidden = false;
@@ -191,7 +192,7 @@
   $('image-viewer').addEventListener('click', e => { const r = e.currentTarget.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) e.currentTarget.close(); });
   $('project-select').addEventListener('change', e => loadProject(e.target.value, true).catch(fail));
   function fail(error) { $('load-status').hidden = false; $('load-status').className = 'error'; $('load-status').textContent = `${error.message}。请稍后刷新；不会影响正式作品馆。`; }
-  fetch('data/catalog.json?v=studio-r4-v1').then(async response => {
+  fetch('data/catalog.json?v=studio-formal-v1').then(async response => {
     if (!response.ok) throw new Error(`目录暂未载入（HTTP ${response.status}）`);
     catalog = await response.json();
     if (catalog.schemaVersion !== 1 || !catalog.projects?.length) throw new Error('审片目录为空或版本不兼容');

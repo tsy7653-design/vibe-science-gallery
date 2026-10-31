@@ -1,0 +1,545 @@
+{
+  "schemaVersion": 1,
+  "id": "escape-gravity",
+  "title": "如何逃离地球引力？",
+  "version": "完整版 V1 · 未定稿",
+  "updatedAt": "2026-10-31",
+  "statusLabel": "198秒V1已完成 · 待审查",
+  "stageIndex": 3,
+  "durationLabel": "推荐约198秒",
+  "heroResource": "three",
+  "question": "为什么有的物体会落回地球，有的能一直绕行，有的却能真正逃离？",
+  "audienceGoal": "让零基础观众先看懂运动，再理解逃逸速度；不以公式开场。",
+  "recommendationTitle": "完整版 V1 待你审查",
+  "recommendation": "A+C融合正式版已完成：15段、198秒、原创音轨。此处只发布720p审查版，1080p在本地保留；没有上架正式视频馆。旧32秒融合片与A/B/C全部保留。",
+  "narratives": [
+    {
+      "id": "A",
+      "title": "同一颗球，三种去向",
+      "duration": "约198秒",
+      "pitch": "从熟悉的抛球，走向环绕与逃逸。",
+      "subtitle": "连续实验",
+      "recommended": false,
+      "hook": "一颗熟悉的小球抛起又落下；同样受地球吸引的卫星却从地平线上划过。问题：“都在往地球落，为什么它没有掉下来？”先建立可感知矛盾，片名随后出现。",
+      "logic": "镜头沿地平线拉远。明确进入1000km高空的假想试验点，保留同一球体身份，但标明场景／尺度切换，不暗示刚才的轻轻一抛已经到了太空。每次重新释放，只改变切向初速度：撞地 → 不撞地的椭圆 → 圆 → 更大的椭圆。旧试验退为细虚线，新试验成为唯一活动对象。",
+      "reveal": "圆轨道上短暂对照“若没有引力会走的切线”和真实弧线；球向地心偏离切线，同时地面向下弯开。原来卫星没有停止下落。随后更大的椭圆仍然回来；速度达到当地阈值时，不再存在有限的远地点。先看开放路径，再用一小段能量对照说明原因，最后引出地表约11.2km/s。",
+      "ending": "同一个起点留下三条清楚的“命运”：撞地的短弧、绕地的闭合线、继续伸向画外的开放线。每条线只强调一次，最后跟随逃逸点拉远，但地球依然有重量和存在感。字幕：“逃离束缚，不是让引力消失。”片名与正在延伸的路径共存，不另做金色扫光片尾。",
+      "pros": "控制变量清楚，前一个观察自然提出后一个问题；同一地球与球体可贯穿，便于把成熟地球材质和原创解释组合。观众不必认识任何真实火箭型号。",
+      "cons": "反复发射容易像游戏演示；每个试验只承担一个发现，不展示满屏参数和无意义完整绕圈。不能把“提高初速度”画成一颗无推力球在途中自行加速；重置必须可辨认。高空试验点不能画成静止悬停的真实空间站。"
+    },
+    {
+      "id": "B",
+      "title": "把球抛到地平线之外",
+      "duration": "约180–195秒",
+      "pitch": "从地面曲率，看懂牛顿大炮思想实验。",
+      "subtitle": "几何直觉",
+      "recommended": false,
+      "hook": "浅色桌面上的地球模型与一条切线，“如果抛得越来越远，落点最后会在哪里？”不是先摆牛顿画像和年代。",
+      "logic": "一座明确为思想实验的高台，逐次增强水平发射；观众追着落点移动，相机发现地面不是平板。高台和圆板的几何保持，材质逐渐让位于真实地球。绕行后继续增加速度，进入椭圆和开放轨道。",
+      "reveal": "“地面弯开”成为一次视觉发现；引力没有被抵消，而是在不断改变运动方向。用同一尺规比较圆轨道与逃逸所需速度，不讲大炮工程或火药能力。历史出处是NASA官方对牛顿思想实验的讲解[S4]，不编造他的对话和实验过程。",
+      "ending": "镜头退回桌面，观众发现那条看似简单的圆弧已经解释了卫星与逃逸；再以真实地球的同角度画面收束。",
+      "pros": "极易理解，几何解释最干净；有温暖实物感，不必全程黑色太空；开发成本相对可控。",
+      "cons": "超高山／高台不现实，须及时说明；易像传统教学演示，壮观感弱于A。建议用抽象定位标记替代写实巨山；避免把装置包装成可行发射工程。已有弧度制用了工坊叙事，本片若再用桌面圆板容易重复。"
+    },
+    {
+      "id": "C",
+      "title": "一次没有回程的滑行",
+      "duration": "约195–210秒",
+      "pitch": "从发动机熄灭，追问旅程是否继续。",
+      "subtitle": "旅程视角",
+      "recommended": false,
+      "hook": "探测器发动机熄灭，地球缓慢远去。问题：“没有发动机，它还能一直离开吗？”不以爆炸、倒计时或真实任务名制造悬念。",
+      "logic": "在同一高空起点重演三次关机后的状态：一条会与地面相交，一条长期环绕，一条不断远离。以探测器窗口和外部全景交替，回到共同坐标视角才比较轨道。随后补一个地面抛球的短镜头，把陌生航天与熟悉落体联系起来。",
+      "reveal": "是否会回来，不能只看飞得远或发动机是否开着；要看关机时的位置、速度和后续作用力。开放轨道上速度仍可减小，但不会在有限远处折返。当地逃逸阈值与地表11.2分开。",
+      "ending": "舷窗中的地球越来越小，曲线继续延伸，最后字幕回答开头：“推进结束，旅程还可以继续。”再补“仍然受引力作用”的明确落点。",
+      "pros": "主角感、空间感和音乐情绪最强；较容易形成纪录短片气质，真实火箭误区也有自然入口。",
+      "cons": "发动机、相对视角、动量和初速度同时进入，新手负担最大；容易被误解为NASA5632实录或“关机就会逃逸”。需要原创无品牌示意探测器，不值得为几秒钟镜头追求复杂NASA模型。机内声音是设计，不是真空传声。"
+    }
+  ],
+  "timelineNote": "以下为V1实际采用的15段时间线；字幕与模型已在编码后检查，仍待主观教学/艺术审查。",
+  "timeline": [
+    {
+      "id": "AC01",
+      "start": 0,
+      "end": 12,
+      "time": "00:00–00:12",
+      "title": "同一地球，不同结局",
+      "see": "从明亮地球弧面拉远至同一个探测器；先看运动，不上公式。",
+      "understand": "抛出的球会落回地面。卫星同样被地球吸引，为什么却能一直绕行？",
+      "motion": "从明亮地球弧面拉远至同一个探测器；先看运动，不上公式。",
+      "mood": "Three地球材质＋原创机体；宏大而好奇。",
+      "production": "Three地球材质＋原创机体；宏大而好奇。"
+    },
+    {
+      "id": "AC02",
+      "start": 12,
+      "end": 24,
+      "time": "00:12–00:24",
+      "title": "建立共同起点",
+      "see": "标出共同释放点和切向箭头；明确真空、球形地球、无自转、关机后的两体模型。",
+      "understand": "把同一个物体放在地表以上1000千米。同一位置、同一方向，分别给它不同初速度。",
+      "motion": "标出共同释放点和切向箭头；明确真空、球形地球、无自转、关机后的两体模型。",
+      "mood": "原创定位，不画真实悬停空间站；可比而清楚。",
+      "production": "原创定位，不画真实悬停空间站；可比而清楚。"
+    },
+    {
+      "id": "AC03",
+      "start": 24,
+      "end": 36,
+      "time": "00:24–00:36",
+      "title": "先看落回",
+      "see": "6km/s案例，沿模型到碰地即停止；旧轨迹退为细线，不穿地继续飞。",
+      "understand": "速度较小时，轨迹向地球弯下去。如果这条路穿过地面，物体就会撞地。",
+      "motion": "6km/s案例，沿模型到碰地即停止；旧轨迹退为细线，不穿地继续飞。",
+      "mood": "解析轨道＋碰撞根求解；观察因果。",
+      "production": "解析轨道＋碰撞根求解；观察因果。"
+    },
+    {
+      "id": "AC04",
+      "start": 36,
+      "end": 50,
+      "time": "00:36–00:50",
+      "title": "环绕依然下落",
+      "see": "精确圆速案例；固定同参考视角，短暂显示切线和径向引力箭头。",
+      "understand": "重新释放得更快。引力仍把运动方向拉向地心，但物体不断错过弯曲的地面。",
+      "motion": "精确圆速案例；固定同参考视角，短暂显示切线和径向引力箭头。",
+      "mood": "原创比较；不展示力平衡或引力被抵消。",
+      "production": "原创比较；不展示力平衡或引力被抵消。"
+    },
+    {
+      "id": "AC05",
+      "start": 50,
+      "end": 64,
+      "time": "00:50–01:04",
+      "title": "不只有圆",
+      "see": "同起点9km/s椭圆，地球位于焦点；远地点停留稍长、近地点更快，遵守时间参数。",
+      "understand": "绕行也是自由落体。更换初速度，还会得到椭圆；只要轨道不碰地，它也可以一直绕行。",
+      "motion": "同起点9km/s椭圆，地球位于焦点；远地点停留稍长、近地点更快，遵守时间参数。",
+      "mood": "新增原创解析椭圆；破除低于逃逸必撞地误解。",
+      "production": "新增原创解析椭圆；破除低于逃逸必撞地误解。"
+    },
+    {
+      "id": "AC06",
+      "start": 64,
+      "end": 78,
+      "time": "01:04–01:18",
+      "title": "什么时候不再回来",
+      "see": "旧闭合轨迹退出，镜头扩展视野；同起点显示临界轨道延伸，不画有限边界门。",
+      "understand": "椭圆可以越来越大，但仍有远地点。继续增加初速度，什么时候连回程都不再存在？",
+      "motion": "旧闭合轨迹退出，镜头扩展视野；同起点显示临界轨道延伸，不画有限边界门。",
+      "mood": "解析轨道＋原创镜头；悬念上扬。",
+      "production": "解析轨道＋原创镜头；悬念上扬。"
+    },
+    {
+      "id": "AC07",
+      "start": 78,
+      "end": 91,
+      "time": "01:18–01:31",
+      "title": "逃逸的临界状态",
+      "see": "用Barker解绘临界轨道；只展示有限可见段，文字明确“无限远处的极限”。",
+      "understand": "在理想模型中，刚好逃逸时，轨迹是抛物线。它可以不断远离，速度趋近于零。",
+      "motion": "用Barker解绘临界轨道；只展示有限可见段，文字明确“无限远处的极限”。",
+      "mood": "原创临界案例；不暗示在画面边缘重力归零。",
+      "production": "原创临界案例；不暗示在画面边缘重力归零。"
+    },
+    {
+      "id": "AC08",
+      "start": 91,
+      "end": 105,
+      "time": "01:31–01:45",
+      "title": "超过临界",
+      "see": "11km/s同点释放；保持同一探测器与同一条模型轨迹，开启后续主角旅程。",
+      "understand": "再快一些，就成为双曲线逃逸。即使不再推进，它仍能远离，并在无限远处保有余速。",
+      "motion": "11km/s同点释放；保持同一探测器与同一条模型轨迹，开启后续主角旅程。",
+      "mood": "A控制变量＋C主角感；高潮起点。",
+      "production": "A控制变量＋C主角感；高潮起点。"
+    },
+    {
+      "id": "AC09",
+      "start": 105,
+      "end": 119,
+      "time": "01:45–01:59",
+      "title": "为什么有这个门槛",
+      "see": "简洁动能/势能视觉天平；动画观察后才归纳v逃=√(2GM/r)，一屏只一个关系。",
+      "understand": "远离地球，需要克服引力的束缚。初始动能足够，物体就不会在有限远处折返。",
+      "motion": "简洁动能/势能视觉天平；动画观察后才归纳v逃=√(2GM/r)，一屏只一个关系。",
+      "mood": "OpenStax13.3；公式为总结，不替代解释。",
+      "production": "OpenStax13.3；公式为总结，不替代解释。"
+    },
+    {
+      "id": "AC10",
+      "start": 119,
+      "end": 134,
+      "time": "01:59–02:14",
+      "title": "11.2到底是什么",
+      "see": "半径尺从地心指到两处位置；数值停留，不高速滚动；两点不能混为同一高度。",
+      "understand": "从理想地表出发，逃逸速度约11.2千米每秒。这里的1000千米高空，门槛约10.4。",
+      "motion": "半径尺从地心指到两处位置；数值停留，不高速滚动；两点不能混为同一高度。",
+      "mood": "JPL参数＋NASA半径；清楚定量。",
+      "production": "JPL参数＋NASA半径；清楚定量。"
+    },
+    {
+      "id": "AC11",
+      "start": 134,
+      "end": 147,
+      "time": "02:14–02:27",
+      "title": "真实火箭不是瞬间弹射",
+      "see": "原探测器旁用简短发动机燃烧阶段图示对比关机自由段；不画火箭凭空提速。",
+      "understand": "这不是要求火箭离地瞬间就达到11.2。真实火箭持续推进，推力会不断改变它的能量和轨道。",
+      "motion": "原探测器旁用简短发动机燃烧阶段图示对比关机自由段；不画火箭凭空提速。",
+      "mood": "NASA发射资料为依据，原创示意；不套真实任务轨迹。",
+      "production": "NASA发射资料为依据，原创示意；不套真实任务轨迹。"
+    },
+    {
+      "id": "AC12",
+      "start": 147,
+      "end": 161,
+      "time": "02:27–02:41",
+      "title": "引力没有消失",
+      "see": "由全局轨道视角连续推近同一机体；轨迹端点紧贴、无切换对象。",
+      "understand": "跟上最后这次旅程。探测器还在减速、轨迹仍在弯曲，因为地球引力从未突然消失。",
+      "motion": "由全局轨道视角连续推近同一机体；轨迹端点紧贴、无切换对象。",
+      "mood": "C空间表现＋A同一模型；共同参考视角先解释减速。",
+      "production": "C空间表现＋A同一模型；共同参考视角先解释减速。"
+    },
+    {
+      "id": "AC13",
+      "start": 161,
+      "end": 175,
+      "time": "02:41–02:55",
+      "title": "深空并非绝对自由",
+      "see": "地球成为远处有层次的明暗球体；不加虚构边界壳，不把去深空说成逃离太阳系。",
+      "understand": "距离增加，引力逐渐减弱。本片只看地球两体模型；真实深空还会受到太阳等天体影响。",
+      "motion": "地球成为远处有层次的明暗球体；不加虚构边界壳，不把去深空说成逃离太阳系。",
+      "mood": "原创跟随镜头；宏大而克制。",
+      "production": "原创跟随镜头；宏大而克制。"
+    },
+    {
+      "id": "AC14",
+      "start": 175,
+      "end": 187,
+      "time": "02:55–03:07",
+      "title": "回答开头",
+      "see": "同一条逃逸轨迹保留在空间，远处三条简洁记忆线短暂汇聚后自然退出。",
+      "understand": "坠落、绕行、逃逸：不是三种不同的引力，而是同一引力下，不同初始运动带来的结局。",
+      "motion": "同一条逃逸轨迹保留在空间，远处三条简洁记忆线短暂汇聚后自然退出。",
+      "mood": "原创视觉收束；不重放整个实验。",
+      "production": "原创视觉收束；不重放整个实验。"
+    },
+    {
+      "id": "AC15",
+      "start": 187,
+      "end": 198,
+      "time": "03:07–03:18",
+      "title": "属于本片的主题亮相",
+      "see": "轨迹延伸为片名构图基线；“这就是”独立出现并完整退出，再中文主题＋小英文，机体与地球仍在背景；无金色扫光。",
+      "understand": "逃离束缚，不是摆脱引力。｜这就是｜如何逃离地球引力？",
+      "motion": "轨迹延伸为片名构图基线；“这就是”独立出现并完整退出，再中文主题＋小英文，机体与地球仍在背景；无金色扫光。",
+      "mood": "原创结尾构想，完整版未渲染；欣赏与记忆。",
+      "production": "原创结尾构想，完整版未渲染；欣赏与记忆。"
+    }
+  ],
+  "resources": [
+    {
+      "id": "three",
+      "title": "Three.js 官方 Earth",
+      "image": "assets/three-earth-actual.png",
+      "alt": "上一轮实际运行的 Three.js 地球 Demo，包含日夜、云纹与蓝色大气边缘",
+      "evidenceType": "2026-10-22 在线 Demo 实测截图",
+      "decision": "采用材质基础，重新设计镜头与轨道。",
+      "reason": "地球质感和体积层次最好；正式片需要更明确的主体与叙事，不能只录下旋转的球体。",
+      "adaptation": "改成确定性时间线，移除调试面板，加入正确轨道与字幕。云纹与地表共用球体；4K 全球图不承担人的手与近地地形细节。前轮观察到 WebGL2 硬件后端，尚未验证新组合的1080p导出性能。",
+      "license": "代码 MIT；地球贴图 Solar System Scope / INOVE，CC BY 4.0。示例已缩放/合并纹理；此图是原画面截图。不得暗示作者认可本片。",
+      "version": "固定源码：60c44dfb6805d09e997dbee139d893ffc4a428a5；线上部署 SHA 未核实。",
+      "credit": "Three.js authors · Earth textures: Solar System Scope / INOVE · MIT / CC BY 4.0",
+      "source": "https://threejs.org/examples/webgpu_tsl_earth.html",
+      "repo": "https://github.com/mrdoob/three.js/tree/60c44dfb6805d09e997dbee139d893ffc4a428a5"
+    },
+    {
+      "id": "apogee",
+      "title": "Apogee 引力实验",
+      "image": "assets/apogee-actual.png",
+      "alt": "固定版本 Apogee 在本地实际运行的初速度与椭圆运动截图，使用缩放单位",
+      "evidenceType": "2026-10-22 固定版本本地实测截图",
+      "decision": "参考物理函数，不照搬成片画面。",
+      "reason": "适合研究初速度如何改变去向；原界面密度、缩放单位和小游戏表现不适合直接上片。",
+      "adaptation": "改用真实地球参数与解析轨道；拒绝不正确的锁轨装饰椭圆、越界逃逸判据及临界数值误差。截图是短时交互试验，不表示已完整观测一个周期。",
+      "license": "代码 MIT；截图来自已审查的固定版本，运行时屏蔽外部字体请求。只公开该实测图与许可证，不上传不明音源或字体。",
+      "version": "固定源码：8fef7bcbca31c374c3a8d639051f9409e5a2513b。",
+      "credit": "Apogee / ctkrug · MIT · scaled units, not SI Earth data",
+      "source": "https://github.com/ctkrug/apogee",
+      "repo": "https://github.com/ctkrug/apogee/tree/8fef7bcbca31c374c3a8d639051f9409e5a2513b"
+    },
+    {
+      "id": "nasa",
+      "title": "NASA SVS 5632",
+      "image": "assets/nasa-svs5632-official.jpg",
+      "alt": "NASA 官方 Artemis II 地月任务轨道预览，显示绕月后返回地球的轨迹",
+      "evidenceType": "NASA 官方预览 · 不是本地渲染",
+      "decision": "保留尺度与运镜参考，推荐正文不用。",
+      "reason": "这是地月任务的绕行返回，不是任意初速度的地球两体逃逸。影像真实可信，科学用途仍须分清。",
+      "adaptation": "参考真实航天尺度和拉远方式。若以后加入真实任务段，必须明确标注绕月返回；不能接到本片逃逸线冒充同一次运动。",
+      "license": "SVS 一般条款为公有领域，除单项另注；本项保留 NASA/SVS 及两位可视化作者署名。原始选定 MP4 无音轨，不涉及随片音乐。NASA 标识及第三方例外仍适用。",
+      "version": "NASA SVS 5632 · 官方条目发布于2026-04-06；图像来源与条款于前两轮核查。",
+      "credit": "NASA/SVS · Kel Elkins / Ernie Wright · 不暗示 NASA 背书",
+      "source": "https://svs.gsfc.nasa.gov/5632/"
+    }
+  ],
+  "previews": [
+    {
+      "id": "escape-r3-A",
+      "planId": "A",
+      "title": "A｜同一颗球，三种去向",
+      "version": "R3-v1",
+      "duration": 15,
+      "durationLabel": "15秒",
+      "status": "completed_awaiting_feedback",
+      "src": "assets/escape-r3-v1/plan-A-15s.mp4",
+      "poster": "assets/escape-r3-v1/plan-A-poster.jpg",
+      "publicApproved": true,
+      "note": "以三次独立释放，比较落回、环绕与开放逃逸。初速度改变有明确重置，运动来自同一两体模型。",
+      "strength": "控制变量最清楚，直接呈现三种结局；地球与轨道持续对应。",
+      "limitation": "15秒内是机制浓缩，不是完整开场；正式片需为“为何一直下落”增加观察时间。"
+    },
+    {
+      "id": "escape-r3-B",
+      "planId": "B",
+      "title": "B｜把球抛到地平线之外",
+      "version": "R3-v1",
+      "duration": 15,
+      "durationLabel": "15秒",
+      "status": "completed_awaiting_feedback",
+      "src": "assets/escape-r3-v1/plan-B-15s.mp4",
+      "poster": "assets/escape-r3-v1/plan-B-poster.jpg",
+      "publicApproved": true,
+      "note": "明亮实体地球模型与高台思想实验，保留切线参照，再看球如何错过弯曲地面。",
+      "strength": "曲率、速度与向心引力容易同时观察，浅色环境亲和、手机对比清楚。",
+      "limitation": "壮观感较弱，刻度环和发射器仍属简化教具，不是现实可行的巨型大炮。"
+    },
+    {
+      "id": "escape-r3-C",
+      "planId": "C",
+      "title": "C｜一次没有回程的滑行",
+      "version": "R3-v1",
+      "duration": 15,
+      "durationLabel": "15秒",
+      "status": "completed_awaiting_feedback",
+      "src": "assets/escape-r3-v1/plan-C-15s.mp4",
+      "poster": "assets/escape-r3-v1/plan-C-poster.jpg",
+      "publicApproved": true,
+      "note": "关闭发动机的原创示意探测器，沿正能量轨道滑行；相机从近景退至地球与开放路径。",
+      "strength": "最有旅程感和空间纵深，能自然提出“无动力为何还远行”的悬念。",
+      "limitation": "跟随相机会弱化速度变化的直接感受；正式片仍需补充共同参考系对照。探测器是原创放大示意，不是真实任务。"
+    }
+  ],
+  "risks": [
+    "小于逃逸速度，不等于必定撞地：圆轨道和不碰地的椭圆都可能长期环绕。",
+    "同一1000km高空，7.2km/s切向初速仍能形成近地点约414km的不碰地椭圆；不能说“低于圆轨道速度必撞地”。",
+    "圆轨道是持续自由落体，重力没有被抵消；画面只画地心引力与切向速度。",
+    "抛物线是临界逃逸，双曲线是超过临界；不能把出画面或跨过大气光边当作逃逸判据。",
+    "高空实验的阈值约10.40km/s；地表常说的约11.2km/s要单独标明位置。",
+    "真实火箭可以持续或分段推进，不必在地面瞬间达到11.2km/s；它也不等于所有任务的总Δv。",
+    "逃逸后仍受地球引力作用；真实太空还有日月等天体。地球逃逸不是太阳系逃逸。",
+    "切向方向和安全起点是本片的控制条件；方向朝地面时，即使能量够也可能先撞地。"
+  ],
+  "model": "主实验：地心非旋转参考系，球形地球，距地表1000km，从同一点切向释放；无空气，忽略地球自转及日月摄动，释放后无推力。计算采用JPL地球GM与NASA平均半径；动画实现尚未制作。",
+  "sources": [
+    {
+      "title": "OpenStax §13.3 · 引力势能与逃逸",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/13-3-gravitational-potential-energy-and-total-energy",
+      "use": "机械能、逃逸条件与位置依赖；公式在原理演示之后归纳。"
+    },
+    {
+      "title": "OpenStax §13.4 · 卫星轨道",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/13-4-satellite-orbits-and-energy",
+      "use": "圆轨道与持续自由落体。"
+    },
+    {
+      "title": "OpenStax §13.5 · 开普勒定律",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/13-5-keplers-laws-of-planetary-motion",
+      "use": "焦点、椭圆、抛物线和双曲线。"
+    },
+    {
+      "title": "NASA · 牛顿大炮与轨道",
+      "url": "https://science.nasa.gov/learn/basics-of-space-flight/chapter3-4/",
+      "use": "思想实验与真实轨道的区别；不虚构历史对话。"
+    },
+    {
+      "title": "JPL SSD · 天体动力学参数",
+      "url": "https://ssd.jpl.nasa.gov/astro_par.html",
+      "use": "地球GM：398600.435507 km³/s²。"
+    },
+    {
+      "title": "NASA · Earth Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+      "use": "平均半径6371km与地表逃逸速度量级。"
+    },
+    {
+      "title": "NASA · 发射与推进阶段",
+      "url": "https://science.nasa.gov/learn/basics-of-space-flight/chapter14-1/",
+      "use": "真实火箭不能被简化为地面瞬时抛射。"
+    },
+    {
+      "title": "Solar System Scope · 纹理许可",
+      "url": "https://www.solarsystemscope.com/textures/",
+      "use": "CC BY 4.0，保留作者、来源、许可及改动说明。"
+    }
+  ],
+  "nextPreviews": [
+    {
+      "title": "理解检查",
+      "description": "椭圆不撞地、临界逃逸、11.2与持续推进的区别是否看懂？"
+    },
+    {
+      "title": "艺术检查",
+      "description": "轨迹可读性、深空方向感和片尾主题是否自然？"
+    },
+    {
+      "title": "声音检查",
+      "description": "原创旋律与事件音是否协调，是否影响字幕阅读？"
+    }
+  ],
+  "nextGate": "请审查V1的理解效果、镜头节奏和原创音乐，再决定是否精修；不自动上架。",
+  "referenceClips": [
+    {
+      "id": "three-reference",
+      "title": "Three.js Earth · 实际 Demo 画布录制",
+      "src": "assets/three-earth-reference-8s.mp4",
+      "poster": "assets/three-earth-actual.png",
+      "publicApproved": true,
+      "note": "前轮在线实测，8秒无声、720p。只证明现有地球材质运行，不代表逃逸速度动画已经制作。"
+    },
+    {
+      "id": "nasa-reference",
+      "title": "NASA SVS 5632 · 官方任务影像摘录",
+      "src": "assets/nasa-reference-8s.mp4",
+      "poster": "assets/nasa-svs5632-official.jpg",
+      "publicApproved": true,
+      "note": "原片00:08–00:16，缩至720p/30fps，无声。绕月返回任务参考，不是地球单中心逃逸演示。"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-10-31",
+      "title": "完整版 V1 · 未定稿审查",
+      "note": "用户批准融合效果后制作198秒正式候选。只在Studio提供720p，不改正式首页，不覆盖旧片。"
+    },
+    {
+      "date": "2026-10-31",
+      "title": "正式选择A+C · 融合样片R4-v1",
+      "note": "新增32秒实际样片与198秒草案。原A/B/C和比较视频保留；等待融合观看反馈。"
+    },
+    {
+      "date": "2026-10-25",
+      "title": "R3-v1 · Studio 动态样片交付",
+      "note": "接入已完成的三段15秒样片和45秒对比；不重复渲染。等待真实iPhone观看与A/B/C选择。"
+    },
+    {
+      "date": "2026-10-23",
+      "title": "R3-v1 · A/B/C实际动态预览完成",
+      "note": "三段各15秒，720p/30fps/H.264/AAC；原创轻量声音，无Remix。修正轨迹时间采样、C近景裁切及B字幕留白。等待用户真实iPhone审查。"
+    },
+    {
+      "date": "2026-10-23",
+      "title": "Studio v1 · 手机审片入口",
+      "note": "将已完成报告整理为审查卡片。新增本机选择和意见复制；没有制作逃逸速度新镜头。"
+    },
+    {
+      "date": "2026-10-23",
+      "title": "R2-v1 · 科学叙事与视觉选型完成",
+      "note": "三种叙事、198秒推荐分镜、模型参数与风险、第三轮样片计划；等待用户审核。"
+    },
+    {
+      "date": "2026-10-22",
+      "title": "R1 · 资源侦察完成",
+      "note": "12项候选，5项在线与1项本地Demo实测；Three和NASA参考片段已保存。不是本项目动态样片。"
+    }
+  ],
+  "visualDirections": [
+    {
+      "id": "I",
+      "title": "日照边缘",
+      "description": "纪实地球与克制几何。镜头建立宏大尺度，比较时回到清晰的轨道正视图。"
+    },
+    {
+      "id": "II",
+      "title": "轨道光学台",
+      "description": "温暖明亮的实体几何展示，通过材质与视角匹配走入真实太空。"
+    },
+    {
+      "id": "III",
+      "title": "随行观察窗",
+      "description": "探测器前景与地球远景建立旅程感；关键比较明确切回共同参考系。"
+    }
+  ],
+  "sourceDocuments": [
+    {
+      "file": "README.md",
+      "sha256": "d765c86ee4420b5cee4c84c09116970625181df060277e395104c912c8f683f2"
+    },
+    {
+      "file": "NARRATIVE_OPTIONS.md",
+      "sha256": "f18b349c4b6762106b1ee6d6e455a5734b1ab947ca6b7f09eb3cb7c9d036a285"
+    },
+    {
+      "file": "storyboard.md",
+      "sha256": "bee26389b56278c71fc2b75d27efa9916fecb101cbcf1eddb5855f4346503318"
+    },
+    {
+      "file": "RESOURCE_DECISIONS.md",
+      "sha256": "48e7f7e3cbc3a3e1e54dd63785c285bcc54d4cb602a06666d124cef3e3041b40"
+    },
+    {
+      "file": "PHYSICS_AND_RISKS.md",
+      "sha256": "f960837924de0b666ac0357e1c0a1f66e725971ed8fda7c59df68fbcebde10f6"
+    },
+    {
+      "file": "STYLE_OPTIONS.md",
+      "sha256": "57bcd40d34af1c4c39b9c4e038d7591a8620c2ba69129cdfc6ee9f33ae4e70cf"
+    },
+    {
+      "file": "ROUND3_PREVIEW_PLAN.md",
+      "sha256": "9d15016c933c1d33a5553ae2466ab5bf2f8a64e9c80408b4d704fd0754404640"
+    },
+    {
+      "file": "SOURCES.md",
+      "sha256": "36d00e8184d1d0fc8e0508a8cae41927f575e85059a9b46d371de185d75e0671"
+    }
+  ],
+  "comparison": {
+    "id": "escape-r3-comparison",
+    "title": "A → B → C｜连续对比",
+    "version": "R3-v1",
+    "duration": 45,
+    "durationLabel": "45秒",
+    "src": "assets/escape-r3-v1/ABC-comparison-45s.mp4",
+    "poster": "assets/escape-r3-v1/ABC-comparison-poster.jpg",
+    "publicApproved": true,
+    "note": "三段预览顺序播放，画面流直接复用；每段15秒，无个人Remix音乐。"
+  },
+  "fusion": {
+    "id": "escape-r4-AC",
+    "title": "A+C融合版｜同一引力，一次深空旅程",
+    "durationLabel": "32秒",
+    "version": "R4-v1",
+    "publicApproved": true,
+    "src": "assets/escape-r4-v1/AC-fusion-32s.mp4",
+    "poster": "assets/escape-r4-v1/AC-fusion-poster.jpg",
+    "note": "新制作的连续场景，不是A/C旧片拼接。相同位置与方向，三次释放后，跟随逃逸探测器进入远景。",
+    "strength": "固定参考视角先比较三种结局，再连续移动到同一机体；没有更换物理模型或主角。",
+    "limitation": "32秒仍是浓缩验证；圆与开放轨迹不替代完整版椭圆/临界解释。近景地球局部会出画，箭头辅助字建议横屏；原创声音较轻，无配音。"
+  },
+  "formalReview": {
+    "id": "escape-formal-v1",
+    "title": "《如何逃离地球引力？》V1｜未定稿审查",
+    "version": "V1 · 未定稿",
+    "durationLabel": "198秒",
+    "statusLabel": "公开候选音轨 · 待主观审查",
+    "publicApproved": true,
+    "src": "assets/escape-formal-v1/escape-velocity-v1-review-720p.mp4",
+    "poster": "assets/escape-formal-v1/cover.jpg",
+    "note": "720p/30fps · 约16.17MB · 原创音乐与音效，无Remix。点击后才加载；建议横屏全屏观看。此为创作审查，不是正式上架。",
+    "strength": "同点不同初速度；增加椭圆、临界抛物线与高空推进示意。连续追随同一探测器，片尾分阶段揭示逃逸速度。",
+    "limitation": "无真人旁白，以中文底部字幕讲解；原创合成配乐仍待听感审查。二维轨道平面用于理解，机体是放大示意；真实iPhone验收由你完成。"
+  }
+}
